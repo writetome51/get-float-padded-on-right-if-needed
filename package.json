@@ -1,21 +1,23 @@
 {
-  "name": "@writetome51/get-fixed-float",
+  "name": "@writetome51/get-float-padded-on-right-if-needed",
   "version": "1.0.0",
-  "description": "A function that takes an array of numbers and puts them in ascending order",
+  "description": "Adds zeros to the end of a float if needed.",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "numbers",
-    "sorting"
+    "format",
+    "formatting",
+    "pad",
+    "padding"
   ],
   "author": "Steve Thompson",
   "license": "MIT",
   "dependencies": {
     "basic-data-handling": "latest",
     "@writetome51/get-right-of-decimal": "latest",
-    "@writetome51/get-left-of-decimal": "latest",
-    "@writetome51/get-cautiously-rounded": "latest"
+    "@writetome51/get-left-of-decimal": "latest"
   }
 }

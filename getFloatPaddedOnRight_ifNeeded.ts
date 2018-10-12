@@ -6,9 +6,10 @@ import { getLeftOfDecimal } from '@writetome51/get-left-of-decimal';
 
 
 // Appends zeros to end of num until num has required numDigitsNeededAfterDecimal.
-// If numDigitsNeededAfterDecimal is zero, no padding is appended.
+// The function does not trim any digits off if num already has or exceeds
+// numDigitsNeededAfterDecimal.
 
-export function getFloatPaddedOnRight(num, numDigitsNeededAfterDecimal): string {
+export function getFloatPaddedOnRight_ifNeeded(num, numDigitsNeededAfterDecimal): string {
 	errorIfNotNumber(num);
 	errorIfNotIntegerZeroOrGreater(numDigitsNeededAfterDecimal);
 	let fraction = '';
