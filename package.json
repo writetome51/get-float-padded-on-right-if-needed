@@ -1,8 +1,8 @@
 {
   "name": "@writetome51/get-float-padded-on-right-if-needed",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adds zeros to the end of a float if needed.",
-  "main": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

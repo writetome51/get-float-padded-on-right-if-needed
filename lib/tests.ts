@@ -22,7 +22,7 @@ console.log(num);
 
 
 num = 11.1;
-num = getFloatPaddedOnRight_ifNeeded(num, 2);
+num = getFloatPaddedOnRight_ifNeeded(num, 2); // 11.10
 console.log(num);
 
 
@@ -46,6 +46,6 @@ num = getFloatPaddedOnRight_ifNeeded(num, 3);
 console.log(num);
 
 
-num = 11.1556;
+num = 11.155;
 num = getFloatPaddedOnRight_ifNeeded(num, 3);
 console.log(num);

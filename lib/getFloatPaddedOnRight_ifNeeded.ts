@@ -1,7 +1,7 @@
 import { errorIfNotIntegerZeroOrGreater } from 'basic-data-handling/errorIfNotIntegerZeroOrGreater';
 import { errorIfNotNumber } from 'basic-data-handling/errorIfNotNumber';
 import { isFloat } from 'basic-data-handling/isInteger_isFloat';
-import { getRightOfDecimal } from '@writetome51/get-right-of-decimal/getRightOfDecimal';
+import { getRightOfDecimal } from '@writetome51/get-right-of-decimal';
 import { getLeftOfDecimal } from '@writetome51/get-left-of-decimal';
 
 
