@@ -28,24 +28,24 @@ console.log(num);
 
 num = 11.1;
 num = getFloatPaddedOnRight_ifNeeded(num, 4);
-console.log(num);
+console.log(num); // 11.1000
 
 
 num = 11.15;
 num = getFloatPaddedOnRight_ifNeeded(num, 3);
-console.log(num);
+console.log(num);// 11.150
 
 
 num = 11.1556;
 num = getFloatPaddedOnRight_ifNeeded(num, 3);
-console.log(num);
+console.log(num); // 11.1556
 
 
 num = 11.15;
 num = getFloatPaddedOnRight_ifNeeded(num, 3);
-console.log(num);
+console.log(num);// 11.150
 
 
 num = 11.155;
 num = getFloatPaddedOnRight_ifNeeded(num, 3);
-console.log(num);
+console.log(num);// 11.155
