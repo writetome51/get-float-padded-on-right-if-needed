@@ -1,4 +1,4 @@
-import { getFloatPaddedOnRight_ifNeeded } from './getFloatPaddedOnRight_ifNeeded';
+import { getFloatPaddedOnRight_ifNeeded } from './index';
 
 
 let num: any = 11;
