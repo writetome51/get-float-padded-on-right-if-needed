@@ -14,8 +14,16 @@
     "pad",
     "padding"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/writetome51/get-float-padded-on-right-if-needed.git"
+  },
   "author": "Steve Thompson",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/writetome51/get-float-padded-on-right-if-needed/issues"
+  },
+  "homepage": "https://github.com/writetome51/get-float-padded-on-right-if-needed#readme",
   "dependencies": {
     "basic-data-handling": "~1.0.13",
     "@writetome51/get-right-of-decimal": "~1.0.2",
