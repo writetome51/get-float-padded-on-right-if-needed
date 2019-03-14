@@ -1,51 +1,66 @@
 import { getFloatPaddedOnRight_ifNeeded } from './index';
 
 
-let num: any = 11;
-num = getFloatPaddedOnRight_ifNeeded(num, 1);
-console.log(num);
+let num = getFloatPaddedOnRight_ifNeeded(0, 1);
+if (num === '0.0') console.log('test 1 passed');
+else console.log('test 1 FAILED');
 
 
-num = 11;
-num = getFloatPaddedOnRight_ifNeeded(num, 2);
-console.log(num);
+num = getFloatPaddedOnRight_ifNeeded(0, 2);
+if (num === '0.00') console.log('test 2 passed');
+else console.log('test 2 FAILED');
 
 
-num = 11;
-num = getFloatPaddedOnRight_ifNeeded(num, 4);
-console.log(num);
+num = getFloatPaddedOnRight_ifNeeded(0, 4);
+if (num === '0.0000') console.log('test 3 passed');
+else console.log('test 3 FAILED');
 
 
-num = 11;
-num = getFloatPaddedOnRight_ifNeeded(num, 0);
-console.log(num);
+num = getFloatPaddedOnRight_ifNeeded(0, 0);
+if (num === '0') console.log('test 4 passed');
+else console.log('test 4 FAILED');
 
 
-num = 11.1;
-num = getFloatPaddedOnRight_ifNeeded(num, 2); // 11.10
-console.log(num);
+num = getFloatPaddedOnRight_ifNeeded(0.1, 0);
+if (num === '0.1') console.log('test 5 passed');
+else console.log('test 5 FAILED');
 
 
-num = 11.1;
-num = getFloatPaddedOnRight_ifNeeded(num, 4);
-console.log(num); // 11.1000
+num = getFloatPaddedOnRight_ifNeeded(0.1, 1);
+if (num === '0.1') console.log('test 6 passed');
+else console.log('test 6 FAILED');
 
 
-num = 11.15;
-num = getFloatPaddedOnRight_ifNeeded(num, 3);
-console.log(num);// 11.150
+num = getFloatPaddedOnRight_ifNeeded(0.1, 2);
+if (num === '0.10') console.log('test 7 passed');
+else console.log('test 7 FAILED');
 
 
-num = 11.1556;
-num = getFloatPaddedOnRight_ifNeeded(num, 3);
-console.log(num); // 11.1556
+num = getFloatPaddedOnRight_ifNeeded(0.1, 4);
+if (num === '0.1000') console.log('test 8 passed');
+else console.log('test 8 FAILED');
 
 
-num = 11.15;
-num = getFloatPaddedOnRight_ifNeeded(num, 3);
-console.log(num);// 11.150
+num = getFloatPaddedOnRight_ifNeeded(10.01, 3);
+if (num === '10.010') console.log('test 9 passed');
+else console.log('test 9 FAILED');
 
 
-num = 11.155;
-num = getFloatPaddedOnRight_ifNeeded(num, 3);
-console.log(num);// 11.155
+num = getFloatPaddedOnRight_ifNeeded(10.01, 2);
+if (num === '10.01') console.log('test 10 passed');
+else console.log('test 10 FAILED');
+
+
+num = getFloatPaddedOnRight_ifNeeded(10.001, 3);
+if (num === '10.001') console.log('test 11 passed');
+else console.log('test 11 FAILED');
+
+
+num = getFloatPaddedOnRight_ifNeeded(10.001, 5);
+if (num === '10.00100') console.log('test 12 passed');
+else console.log('test 12 FAILED');
+
+
+num = getFloatPaddedOnRight_ifNeeded(-10.001, 5);
+if (num === '-10.00100') console.log('test 13 passed');
+else console.log('test 13 FAILED');
