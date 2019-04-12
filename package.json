@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/get-float-padded-on-right-if-needed",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Adds zeros to the end of a float if needed.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -25,8 +25,10 @@
   },
   "homepage": "https://github.com/writetome51/get-float-padded-on-right-if-needed#readme",
   "dependencies": {
-    "basic-data-handling": "~1.0.15",
-    "@writetome51/get-right-of-decimal": "~1.0.4",
-    "@writetome51/get-left-of-decimal": "~1.0.4"
+    "error-if-not-integer-zero-or-greater": "~1.0.0",
+    "error-if-not-finite-number": "~1.0.0",
+    "@writetome51/is-integer-is-float": "~1.0.0",
+    "@writetome51/get-right-of-decimal": "~1.0.5",
+    "@writetome51/get-left-of-decimal": "~1.0.5"
   }
 }

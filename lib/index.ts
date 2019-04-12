@@ -1,6 +1,6 @@
-import { errorIfNotIntegerZeroOrGreater } from 'basic-data-handling/errorIfNotIntegerZeroOrGreater';
-import { errorIfNotNumber } from 'basic-data-handling/errorIfNotNumber';
-import { isFloat } from 'basic-data-handling/isInteger_isFloat';
+import { errorIfNotIntegerZeroOrGreater } from 'error-if-not-integer-zero-or-greater';
+import { errorIfNotFiniteNumber } from 'error-if-not-finite-number';
+import { isFloat } from '@writetome51/is-integer-is-float';
 import { getRightOfDecimal } from '@writetome51/get-right-of-decimal';
 import { getLeftOfDecimal } from '@writetome51/get-left-of-decimal';
 
@@ -10,7 +10,7 @@ import { getLeftOfDecimal } from '@writetome51/get-left-of-decimal';
 // numDigitsNeededAfterDecimal.
 
 export function getFloatPaddedOnRight_ifNeeded(num, numDigitsNeededAfterDecimal): string {
-	errorIfNotNumber(num);
+	errorIfNotFiniteNumber(num);
 	errorIfNotIntegerZeroOrGreater(numDigitsNeededAfterDecimal);
 	let fraction = '';
 	if (isFloat(num)) {
