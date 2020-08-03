@@ -12,6 +12,7 @@ import { getLeftOfDecimal } from '@writetome51/get-left-of-decimal';
 export function getFloatPaddedOnRight_ifNeeded(num, numDigitsNeededAfterDecimal): string {
 	errorIfNotFiniteNumber(num);
 	errorIfNotIntegerZeroOrGreater(numDigitsNeededAfterDecimal);
+
 	let fraction = '';
 	if (isFloat(num)) {
 		fraction = getRightOfDecimal(num);
@@ -19,6 +20,5 @@ export function getFloatPaddedOnRight_ifNeeded(num, numDigitsNeededAfterDecimal)
 	}
 	while (fraction.length < numDigitsNeededAfterDecimal) fraction += '0';
 
-	if (fraction.length > 0) return (String(num) + '.' + fraction);
-	else return String(num);
+	return (fraction.length > 0 ? (String(num) + '.' + fraction) : String(num));
 }

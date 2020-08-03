@@ -5,7 +5,7 @@ If `num` already has or exceeds `numDigitsNeededAfterDecimal`, the function
 returns `num` unchanged.  It does not round or trim `num`.
 
 ## Examples
-```
+```js
 getFloatPaddedOnRight_ifNeeded(11, 1);
     // --> '11.0'
 
@@ -24,12 +24,7 @@ getFloatPaddedOnRight_ifNeeded(11, 0);
 
 
 ## Loading
-```
-// If using TypeScript:
+```js
 import { getFloatPaddedOnRight_ifNeeded } 
     from '@writetome51/get-float-padded-on-right-if-needed';
-// If using ES5 JavaScript:
-var getFloatPaddedOnRight_ifNeeded = 
-    require('@writetome51/get-float-padded-on-right-if-needed')
-        .getFloatPaddedOnRight_ifNeeded;
 ```
