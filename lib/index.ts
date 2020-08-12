@@ -5,20 +5,26 @@ import { getRightOfDecimal } from '@writetome51/get-right-of-decimal';
 import { getLeftOfDecimal } from '@writetome51/get-left-of-decimal';
 
 
-// Appends zeros to end of num until num has required numDigitsNeededAfterDecimal.
-// The function does not trim any digits off if num already has or exceeds
-// numDigitsNeededAfterDecimal.
+// Appends zeros to end of `num` until `num` has required `numDigitsNeededAfterDecimal`.
+// Does not trim any digits off if `num` already has or exceeds `numDigitsNeededAfterDecimal`.
 
 export function getFloatPaddedOnRight_ifNeeded(num, numDigitsNeededAfterDecimal): string {
 	errorIfNotFiniteNumber(num);
 	errorIfNotIntegerZeroOrGreater(numDigitsNeededAfterDecimal);
 
 	let fraction = '';
-	if (isFloat(num)) {
-		fraction = getRightOfDecimal(num);
-		num = getLeftOfDecimal(num);
-	}
-	while (fraction.length < numDigitsNeededAfterDecimal) fraction += '0';
+	if (isFloat(num)) [num, fraction] = getSeparatedAtDecimal(num);
 
-	return (fraction.length > 0 ? (String(num) + '.' + fraction) : String(num));
+	let fracLength = fraction.length;
+	while (fracLength < numDigitsNeededAfterDecimal) {
+		fraction += '0';
+		++fracLength;
+	}
+	return (fracLength > 0 ? (String(num) + '.' + fraction) : String(num));
+
+
+	function getSeparatedAtDecimal(num) {
+		return [getLeftOfDecimal(num), getRightOfDecimal(num)];
+	}
+
 }
