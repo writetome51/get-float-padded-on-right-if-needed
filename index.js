@@ -1,7 +1,5 @@
 import {errorIfNotIntegerZeroOrGreater} from 'error-if-not-integer-zero-or-greater';
 import {isFloat} from '@writetome51/is-integer-is-float';
-import {getRightOfDecimal} from '@writetome51/get-right-of-decimal';
-import {getLeftOfDecimal} from '@writetome51/get-left-of-decimal';
 import {toStr} from '@writetome51/to-str';
 
 
@@ -12,7 +10,7 @@ export function getFloatPaddedOnRight_ifNeeded(num, numDigitsNeededAfterDecimal)
 	errorIfNotIntegerZeroOrGreater(numDigitsNeededAfterDecimal);
 
 	let fraction = '';
-	if (isFloat(num))  [num, fraction] = [getLeftOfDecimal(num), getRightOfDecimal(num)];
+	if (isFloat(num))  [num, fraction] = toStr(num).split('.');
 
 	for (var fracLength = fraction.length; fracLength < numDigitsNeededAfterDecimal; ++fracLength) {
 		fraction += '0';
